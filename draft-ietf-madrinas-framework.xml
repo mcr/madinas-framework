@@ -121,17 +121,17 @@
 
 	    <t>However, such address change may affect the user experience and the efficiency of legitimate
       network operations. For a long time, the unicity of the association between a device
-      and a MAC address was assumed, despite the emergence of tools to flush out the MAC address to bypass 
-      some network policies. When this association is broken, elements of network communication may also break. 
+      and a MAC address was assumed, despite the emergence of tools to flush out the MAC address to bypass
+      some network policies. When this association is broken, elements of network communication may also break.
       For example, sessions established between the end-device and network services may be lost and
-      packets in translation may suddenly be without clear source or destination. As multiple clients implements 
+      packets in translation may suddenly be without clear source or destination. As multiple clients implements
       fast-paced RCM rotations, network
 		  services may be over-solicited by a small number of stations that appear as many clients.</t>
 
-	    <t>At the same time, some network services rely on the client station providing an identifier, which can be 
-      the MAC address or another value. If the client implements MAC rotation but continues sending the same static 
-      identifier, then the association between a stable identifier identifier and the station continues despite the RCM scheme. 
-      There may be environements where such continued association is desirable, but others where the user privacy has 
+	    <t>At the same time, some network services rely on the client station providing an identifier, which can be
+      the MAC address or another value. If the client implements MAC rotation but continues sending the same static
+      identifier, then the association between a stable identifier identifier and the station continues despite the RCM scheme.
+      There may be environements where such continued association is desirable, but others where the user privacy has
       more value than any continuity of network service state. </t>
 
       <t>There is a need to enumerate services that may be
@@ -222,7 +222,7 @@
       its MAC address, other devices on the same LAN may fail to recognize that the same machine is attempting
       to communicate with them. Additionally, multiple layers implemented at upper OSI layers have been designed
       with the assumption that each node on the LAN, using these services, would have a unique MAC address. This
-      assumption sometimes adds to the PII confusion, for example in the case of Authentication, Association 
+      assumption sometimes adds to the PII confusion, for example in the case of Authentication, Association
       and Accounting (AAA) services authenticating
       the user of a machine and associating the authenticated user to the device MAC address. Other services
       solely focus on the machine (e.g. DHCP), but still expect each device to use a single MAC address.
@@ -257,7 +257,7 @@
         and bridges associate MAC addresses to individual ports (so as to know which port to send a frame
         intended for a particular MAC address). Similarly, authentication, authorization and accounting
         (AAA) services can validate the identity of a device and use the device MAC address as a first pointer
-        to the device identity (before operating further verification). Similarly, some networking devices offer 
+        to the device identity (before operating further verification). Similarly, some networking devices offer
         Layer-2 filtering policies that may rely on the connected MAC addresses. 802.1X-enabled devices may also selectively
         block the data portion of a port until a connecting device is authenticated. These services then use the
         MAC address as a first pointer to the device identity to allow or block data traffic. This list is not
@@ -322,15 +322,15 @@
 
       <section numbered="true" toc="default">
         <name>The Trust and the Environments</name>
-        <t>The surface of PII exposures that can drive MAC address randomization depends on the 
-        environment where the device operates, on the presence and nature of other devices in the 
-        environment, and on the type of network the device is communicating through. Therefore, a device 
-        can express an identity (such as a MAC address) that can be stable over time if trust with the 
-        environment is established, or that can be temporal if an identity is required 
-        for a service in an environment where trust has not been established. Trust is not a binary currency. 
-        Thus it is useful to distinguish what trust a personal device may establish with the different entities 
+        <t>The surface of PII exposures that can drive MAC address randomization depends on the
+        environment where the device operates, on the presence and nature of other devices in the
+        environment, and on the type of network the device is communicating through. Therefore, a device
+        can express an identity (such as a MAC address) that can be stable over time if trust with the
+        environment is established, or that can be temporal if an identity is required
+        for a service in an environment where trust has not been established. Trust is not a binary currency.
+        Thus it is useful to distinguish what trust a personal device may establish with the different entities
         at play in a L2 domain:</t>
-        
+
         <ol spacing="normal" type="1">
 
           <li>Full trust: there are environments where a personal device establishes a trust relationship and can share a stable
@@ -358,7 +358,7 @@
           home walls. However, if traffic is encrypted (e.g. WPA3), some protection for OTA eavesdropping
           can be assumed. The wire segment within the broadcast domain is under the control of the user,
           and is therefore usually not at risk of hosting an eavesdropper. Full trust is typically established at
-	        this level. The device trusts the access point and all L2 domain entities beyond the access point.  
+	        this level. The device trusts the access point and all L2 domain entities beyond the access point.
           Traffic over the Internet does not expose the MAC address if it is not copied to another
           field before routing happens.</li>
 
@@ -375,11 +375,11 @@
           and airports are typical of this environment. The guest network operator may be legally mandated to
           identify devices or users or may have the option to leave all devices and users untracked. In this
           environment, trust is commonly not established with any element of the L2 broadcast domain (Zero trust model by default).</li>
-          
+
           <li>Enterprises (with BYOD): users may be provided corporate devices or
           may bring their own devices. The devices are not directly under the control of a corporate IT
           team. Trust may be established as the device joins the network. Some enterprise models will mandate full trust, others, considering the BYOD nature of the device, will allow selective trust.</li>
-          
+
           <li>Managed enterprises: in this environment, users are typically provided with corporate devices,
           and all connected devices are managed, for example through a Mobile Device Management (MDM) profile
           installed on the device. Full trust is created as the MDM profile is installed.</li>
@@ -457,7 +457,7 @@
 <section numbered="true" toc="default">
   <name>Scenario Mapping Table</name>
 
-  <t><xref target="dev_id" />discusses different environments, different settings, and the expectations of 
+  <t><xref target="dev_id" />discusses different environments, different settings, and the expectations of
   users and network operators. <xref target="scenario_table" /> summarizes the expected degree of trust, network
   admin responsibility, complexity of supported network services and network support expectation from the user</t>
 
@@ -513,13 +513,13 @@
 
 
 <t>For example: a Home network is considered to be trusted and safe. Users expect a simple procedure to connect
-to their home network. All devices in the home network trust each other. Privacy within the Layer 2 domain is 
-not a major concern. The Home network can also include many IoT devices, which need to be simple to onboard 
-and manage. The home user commonly expects the network operator to protect the home network from external 
-threats (attacks from the Internet). The home user also commonly expects simple policy features (e.g., Parental Control). 
+to their home network. All devices in the home network trust each other. Privacy within the Layer 2 domain is
+not a major concern. The Home network can also include many IoT devices, which need to be simple to onboard
+and manage. The home user commonly expects the network operator to protect the home network from external
+threats (attacks from the Internet). The home user also commonly expects simple policy features (e.g., Parental Control).
 Most home users do not expect to need networking skills to manage their home network.</t>
 
-<t>On the other end of the spectrum, Public Wi-Fi is often considered to be untrusted. Privacy is the number 
+<t>On the other end of the spectrum, Public Wi-Fi is often considered to be untrusted. Privacy is the number
 one concern for the user. Most users connect to Public Wi-Fi only require
 imple Internet connectivity service, and expect only limited to no technical support.</t>
 
@@ -531,26 +531,26 @@ imple Internet connectivity service, and expect only limited to no technical sup
         <t>The section describes the requirements for Randomized MAC-Address Changes: </t>
 
         <ol spacing="normal" type="REQ%d">
-		      <li>The network must not make any assumption about client MAC address persistence.  
-          MAC address change must happen while allowing for service continuity.  If a service 
-          is interrupted during the RCM process, there must be a formal mechanism for the 
+		      <li>The network must not make any assumption about client MAC address persistence.
+          MAC address change must happen while allowing for service continuity.  If a service
+          is interrupted during the RCM process, there must be a formal mechanism for the
           client and the network to exchange about the interruption.</li>
 
-	      	<li>During duration of the services, the device shoud not change the identity.  
+	      	<li>During duration of the services, the device shoud not change the identity.
           Any change of identity may result re-authentication and interrupt of the current network services.</li>
 
-	      	<li>Survey the current standards that use MAC address as a device identifier in the protocol.  Make 
+	      	<li>Survey the current standards that use MAC address as a device identifier in the protocol.  Make
           recommendation to the working groups to remove the dependency.</li>
 
-	      	<li>Work as liaison with external standard bodies such as IEEE, BBF and WBA to align with use cases and 
+	      	<li>Work as liaison with external standard bodies such as IEEE, BBF and WBA to align with use cases and
           requirements.</li>
 
           <li> Identify a secure mechanism to authenticate and exchange network identity to the device. </li>
 
-          <li>Identify a secure mechanism to inform the device about the type of network the device is connecting 
+          <li>Identify a secure mechanism to inform the device about the type of network the device is connecting
           to (e.g. public Wi-Fi, enterprise, home), allowing the user to select the device identity (or identities) accordingly.</li>
 
-          <li> Identify a secure mechanism for the network to request device identity.  Upon successful 
+          <li> Identify a secure mechanism for the network to request device identity.  Upon successful
           authentication, the network may provide the device a temporary network-based marker to use the network services.</li>
 
           <li>Identify a secure mechanism for the device to notify the network prior to update the MAC address.</li>
@@ -605,7 +605,7 @@ imple Internet connectivity service, and expect only limited to no technical sup
 <!-- Change Log
 
 v00 2020-02-XX Initial version
-v01	2021-03-19 Updated by Jerome with suggestions from IETF109's side meeting 
+v01	2021-03-19 Updated by Jerome with suggestions from IETF109's side meeting
 v02 2021-05-03 Updated by Jerome with suggestoins from Interim's meeting
 
 -->
